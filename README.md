@@ -3,7 +3,7 @@
 Running on 4xpi4B with 1Tb Hdd in usb 2.0,  
     
   ## Software spec and installation  
-Use rpi imager to install latest ubuntu LTS server (24.04 at current)    
+Use rpi imager to install latest ubuntu LTS server with ssh user&&pass enabled etc etc straight forward wizzard setup (24.04 at current)    
 
 ```sudo apt update```  
 
@@ -12,3 +12,8 @@ Use rpi imager to install latest ubuntu LTS server (24.04 at current)
 ```echo " cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1" | sudo tee -a  /boot/cmdline.txt```  
   
 ```sudo usermod -aG docker user_name```
+  
+```sudo systemctl restart docker```  
+
+get rke binary then ```chmod +x rke``` and run it with relevent cluster.yml present see mine in this repo:::
+
