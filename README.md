@@ -15,5 +15,12 @@ Use rpi imager to install latest ubuntu LTS server with ssh user&&pass enabled e
   
 ```sudo systemctl restart docker```  
 
-get rke binary then ```chmod +x rke``` and run it with relevent cluster.yml present see mine in this repo:::
+---  
+
+```ssh-keygen -t rsa```  
+```cat ~/.ssh/id_rsa.pub | ssh user@hostname 'cat >> .ssh/authorized_keys'```  
+
+---  
+  
+get rke binary then ```chmod +x rke``` and run it with relevent cluster.yml, see mine in this repo:::  
 
