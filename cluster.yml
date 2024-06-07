@@ -1,1 +1,25 @@
-
+nodes:
+- address: 192.168.1.31
+  user: pi
+  role:
+  - controlplane
+  - etcd
+- address: 192.168.1.32
+  user: pi
+  role:
+  - etcd
+  - worker
+- address: 192.168.1.33
+  user: pi
+  role:
+  - etcd
+  - worker
+- address: 192.168.1.34
+  user: pi
+  role:
+  - worker
+ssh_key_path: ~/.ssh/id_rsa
+ingress:
+  provider: nginx
+  options:
+    use-forwarded-headers: 'true'
