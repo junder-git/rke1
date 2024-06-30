@@ -24,3 +24,10 @@ Use rpi imager to install latest ubuntu LTS server with ssh user&&pass enabled e
   
 get rke binary then ```chmod +x rke``` and run it with relevent cluster.yml, see mine in this repo:::  
 
+---  
+  
+### Useful commands  
+```for p in $(./kubectl get pods | grep Terminating | awk '{print $1}'); do ./kubectl delete pod $p --grace-period=0 --force;done```  
+  
+```docker cp ad03a85b4e61:etc/nginx/ /jstorenginx```  
+  
