@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   annotations:
     # add an annotation indicating the issuer to use.
-    cert-manager.io/cluster-issuer: letsencrypt-staging
+    cert-manager.io/cluster-issuer: letsencrypt-prod
   name: learnscianalytics
   namespace: default
 spec:
@@ -17,8 +17,8 @@ spec:
           service:
             name: learnscianalytics
             port:
-              number: 443
+              number: 80
   tls: # < placing a host in the TLS config will determine what ends up in the cert's subjectAltNames
   - hosts:
     - learnscianalytics.com
-    secretName: learnscianalytics-cert # < cert-manager will store the created certificate in this secret.
+    secretName: learnscianalytics-prod # < cert-manager will store the created certificate in this secret.
