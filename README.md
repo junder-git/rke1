@@ -29,5 +29,5 @@ get rke binary then ```chmod +x rke``` and run it with relevent cluster.yml, see
 ### Useful commands  
 ```for p in $(./kubectl get pods | grep Terminating | awk '{print $1}'); do ./kubectl delete pod $p --grace-period=0 --force;done```  
   
-```docker cp ad03a85b4e61:etc/nginx/ /jstorenginx```  
+```docker cp 3eb6ed26e7fc:etc/nginx/ /jstorenginx```  
   
