@@ -15,7 +15,7 @@ spec:
         path: /
         backend:
           service:
-            name: jnginx
+            name: learnscianalytics
             port:
               number: 443
   tls: # < placing a host in the TLS config will determine what ends up in the cert's subjectAltNames
